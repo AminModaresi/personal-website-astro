@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Soleng.ai",
+    "short_description": "A Web3-based website for an AI and blockchain company.",
+    "tech_stack": ["React", "reown"],
+    "details": [
+      "Contributed to the development and improvement of the Web3-based website.",
+      "Enhanced UX, optimized load times, and improved Web3 integration.",
+      "Collaborated with the project team to refine website architecture."
+    ],
+    "link" : "https://terminal.soleng.ai"
+  },
+    {
+      "name": "license-market",
+      "short_description": "Automated support chat operator for handling customer interactions.",
+      "tech_stack": ["n8n", "Node.js (custom nodes)", "Nginx", "Linux", "Docker", "TMux"],
+      "start_date": "02/2025",
+      "end_date": "03/2025",
+      "details": [
+        "Developed an automation system for support chat operators.",
+        "Created custom n8n nodes using Node.js to dynamically load operators.",
+        "Used n8n for workflow automation and Nginx for efficient request handling.",
+        "Deployed and managed services using Docker and tmux on Linux servers."
+      ],
+    "link" : ""
+    },
+    {
+      "name": "khateelm",
+      "short_description": "A CRM system designed for better customer relationship management.",
+      "tech_stack": ["React" , "Next.js" , "Material-UI"],
+      "start_date": "05/2024",
+      "end_date": "07/2024",
+      "details": [
+        "Designed and developed a user-friendly and efficient CRM system.",
+        "Acted as a technical consultant and provided training programs.",
+        "Contributed to the development of optimized store management panels."
+      ],
+      "link" : "https://khateelm.com"
+    },
+    {
+      "name": "HVAC project canada",
+      "short_description": "IoT control panel for managing devices and real-time data visualization.",
+      "tech_stack": ["React", "Material-UI"],
+      "start_date": "11/2022",
+      "end_date": "02/2023",
+      "details": [
+        "Developed an IoT control panel for seamless device management.",
+        "Enabled real-time data visualization for enhanced user control."
+      ],
+      "link" : "https://alterenergy.ai/"
+    },
+    {
+      "name": "podq",
+      "short_description": "A human resources simulation panel built with Next.js and Material-UI.",
+      "tech_stack": ["Next.js", "Material-UI"],
+      "start_date": "11/2024",
+      "end_date": "present",
+      "details": [
+        "Developed an interactive and responsive interface to streamline HR processes."
+      ],
+      "link" : ""
+    },
+    {
+      "name": "Personal Website",
+      "short_description": "A static site built with Astro and deployed on Cloudflare Pages.",
+      "tech_stack": ["Astro", "Cloudflare Pages"],
+      "details": [
+        "Challenged myself to learn Astro, a next-gen Static Site Generator (SSG).",
+        "Used Cloudflare Pages for fast, serverless hosting and automatic builds."
+      ],
+      "link" : "https://aminmodaresi.ir"
+    }
+  ]
+  

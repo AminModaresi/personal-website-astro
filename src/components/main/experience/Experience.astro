@@ -1,0 +1,17 @@
+---
+import TitleHeader from "../../common/TitleHeader";
+import BorderContainer from "@/components/common/BorderContainer";
+import ExperienceItem from "./ExperienceItem";
+import data from '@/data/experience.json'
+---
+
+<BorderContainer>
+  <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 relative">
+    <div class="col-span-2 relative">
+      <TitleHeader title="My Experiences" className="sticky top-4 h-auto" />
+    </div>
+    <div class="col-span-3 lg:border-l-2 lg:border-dashed sm:pl-4 grid grid-cols-1 gap-10">
+      {data.experience.map(item => <ExperienceItem {...item}/>)}
+    </div>
+  </div>
+</BorderContainer>

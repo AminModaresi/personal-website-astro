@@ -1,0 +1,37 @@
+{
+    "experience": [
+      {
+        "title": "Front-end Developer",
+        "company": "MagicalAPI",
+        "location": "Muscat, Oman",
+        "duration": "May 2023 – Dec 2024",
+        "responsibilities": [
+          "Developed and optimized the Panel and Playground applications using React and Material-UI, improving user interactivity and ensuring a consistent, responsive design across devices.",
+          "Designed and deployed a custom Chrome extension using JavaScript, automating repetitive client tasks and increasing efficiency by 30%.",
+          "Created a fully responsive landing page using Webflow, increasing website traffic by 40% and boosting user engagement through an intuitive UI/UX design."
+        ]
+      },
+      {
+        "title": "Front-end Developer",
+        "company": "Dashport",
+        "location": "Mashhad, Iran",
+        "duration": "June 2022 – May 2023",
+        "responsibilities": [
+          "Developed a scalable and feature-rich CRM panel using React, streamlining customer management processes and enhancing data accessibility.",
+          "Designed and deployed a high-performance landing page using Next.js, improving load speed by 50% and increasing user retention."
+        ]
+      },
+      {
+        "title": "Front-end Developer",
+        "company": "Paykan",
+        "location": "Mashhad, Iran",
+        "duration": "2021 – 2022",
+        "responsibilities": [
+          "Developed and maintained front-end components using React and Tailwind CSS, improving UI consistency across platforms.",
+          "Collaborated with backend developers to integrate RESTful APIs, enhancing application performance and reliability.",
+          "Optimized website performance by implementing lazy loading and efficient state management, reducing page load time by 35%."
+        ]
+      }
+    ]
+  }
+  

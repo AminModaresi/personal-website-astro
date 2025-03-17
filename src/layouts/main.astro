@@ -11,6 +11,8 @@ const { content } = Astro.props;
 		<title>{content.title}</title>
 	</head>
 	<body>
-		<slot />
+		<div class="w-full lg:w-[1000px] mx-auto">
+			<slot />
+		</div>
 	</body>
 </html>

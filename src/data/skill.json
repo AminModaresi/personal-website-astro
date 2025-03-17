@@ -1,0 +1,86 @@
+{
+  "Frameworks": [
+    {
+      "name": "React",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Next.js",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Vue.js",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Astro",
+      "icon": "astro.png",
+      "cdn" : false
+    }
+  ],
+  "Styling": [
+    {
+      "name": "CSS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "SASS",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Bootstrap",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Material-UI (MUI)",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "tailwind",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+      "cdn" : true
+    }
+  ],
+  "StateManagement": [
+    { "name": "Zustand", "icon": "zustand.svg" , "cdn" : false },
+    {
+      "name": "redux",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+      "cdn" : true
+    }
+  ],
+  "Languages": [
+    {
+      "name": "JavaScript",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "Typescript",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+      "cdn" : true
+    },
+    {
+      "name": "HTML",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+      "cdn" : true
+    }
+  ],
+  "Tools": [
+    {
+      "name": "Git",
+      "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+      "cdn" : true
+    },
+    { "name": "Webflow", "icon": "webflow-icon.png" , "cdn" : false},
+    { "name": "n8n", "icon": "n8n.svg" , "cdn" : false}
+  ],
+  "Backend": [{ "name": "RESTful API's", "icon": "restfullapi.png", "cdn" : false }]
+}

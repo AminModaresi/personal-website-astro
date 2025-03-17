@@ -1,0 +1,36 @@
+---
+import data from "@/data/skill.json";
+import TitleHeader from "../../common/TitleHeader";
+import BorderContainer from "../../common/BorderContainer";
+---
+
+<section>
+  <BorderContainer>
+    <TitleHeader title="My Skills" />
+    <div class="flex flex-wrap gap-4 mt-8">
+      {
+        Object.entries(data).map(([category, items]) => (
+          <div class="w-full">
+            <TitleHeader title={category} size={"small"} />
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+              {items.map((item) => (
+                <div
+                  class="flex justify-center items-center flex-col gap-3 p-4 rounded-xl 
+            bg-[rgb(29,29,32)] bg-gradient-to-tl from-[#232526] to-[#414345] 
+            transition-all duration-700 hover:bg-gradient-to-br hover:from-[#434546] hover:to-[#252729]"
+                >
+                  <img
+                    src={item.cdn ? item.icon : `/skills/${item.icon}`}
+                    alt={item.name}
+                    width="50"
+                  />
+                  {item.name}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </BorderContainer>
+</section>
