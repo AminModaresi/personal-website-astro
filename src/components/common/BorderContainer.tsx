@@ -6,6 +6,6 @@ interface BorderContainerProps {
 }
 
 const BorderContainer = ({ children , className = "" }: BorderContainerProps) => {
-  return <section className={`py-12 px-4 border-b-2 border-dashed ${className}`}>{children}</section>;
+  return <section className={`py-12 px-4 border-b border-dashed ${className}`}>{children}</section>;
 };
 export default BorderContainer
