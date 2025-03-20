@@ -18,7 +18,7 @@ import { Icon } from "astro-icon/components";
     {
       data.map((item) => (
         <Card className="border-dashed">
-          <CardHeader className="border-b border-dashed border-neutral-800">
+          <CardHeader className="border-b border-dashed border-neutral-200 dark:border-neutral-800">
             <div class="flex justify-between items-center">
               <CardTitle>{item.name}</CardTitle>
               {item?.link &&<Button variant="outline" size="icon" asChild={item?.link !== ""}>

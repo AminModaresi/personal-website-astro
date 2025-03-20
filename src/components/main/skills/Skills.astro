@@ -16,15 +16,18 @@ import BorderContainer from "../../common/BorderContainer";
               {items.map((item) => (
                 <div
                   class="flex justify-center items-center flex-col gap-3 p-4 rounded-xl 
-            bg-[rgb(29,29,32)] bg-gradient-to-tl from-[#232526] to-[#414345] 
-            transition-all duration-700 hover:bg-gradient-to-br hover:from-[#434546] hover:to-[#252729]"
+         bg-white bg-gradient-to-tl from-gray-100 to-gray-300 
+         dark:bg-[rgb(29,29,32)] dark:from-[#232526] dark:to-[#414345] 
+         transition-all duration-700 
+         hover:bg-gradient-to-br
+         dark:hover:from-[#434546] dark:hover:to-[#252729]"
                 >
                   <img
                     src={item.cdn ? item.icon : `/skills/${item.icon}`}
                     alt={item.name}
                     width="50"
                   />
-                  {item.name}
+                  <p class="font-medium">{item.name}</p>
                 </div>
               ))}
             </div>
