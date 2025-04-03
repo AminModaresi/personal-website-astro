@@ -7,14 +7,31 @@ const { content } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
     <link rel="shortcut icon" href="favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "8f419be8f6ad47e8a91f5e4c99534d23"}'
+    ></script><!-- End Cloudflare Web Analytics -->
     <title>{content.title}</title>
   </head>
-  <body class="bg-[radial-gradient(#e5e7eb_1px,transparent_0)] dark:bg-[radial-gradient(#272727_1px,transparent_0)]">
+  <body
+    class="bg-[radial-gradient(#e5e7eb_1px,transparent_0)] dark:bg-[radial-gradient(#272727_1px,transparent_0)]"
+  >
     <div class="w-full lg:w-[1000px] mx-auto">
       <slot />
     </div>
