@@ -1,0 +1,54 @@
+---
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import blogs from "@/data/blogs.json";
+
+// Get the last two blogs
+const latestBlogs = blogs.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 2);
+---
+
+<section class="py-16 px-4">
+  <div class="mb-8 text-center">
+    <h2 class="text-3xl font-bold mb-4">Latest Blog Posts</h2>
+    <p class="text-gray-600 dark:text-gray-400">Check out my recent articles and insights</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    {
+      latestBlogs.map((blog) => (
+        <Card>
+          <CardHeader>
+            <CardTitle>
+              <a href={`/blog/${blog.id}`} class="hover:text-blue-500 transition-colors">
+                {blog.title}
+              </a>
+            </CardTitle>
+            <CardDescription>{blog.description}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div class="flex gap-2 flex-wrap">
+              {blog.tags.map((tag) => (
+                <Badge variant="secondary">{tag}</Badge>
+              ))}
+            </div>
+          </CardContent>
+          <CardFooter>
+            <div class="flex justify-between w-full text-sm text-gray-500">
+              <span>{blog.author}</span>
+              <time>{new Date(blog.date).toLocaleDateString()}</time>
+            </div>
+          </CardFooter>
+        </Card>
+      ))
+    }
+  </div>
+
+  <div class="text-center">
+    <a href="/blog">
+      <Button variant="outline" size="lg">
+        View All Posts
+      </Button>
+    </a>
+  </div>
+</section>

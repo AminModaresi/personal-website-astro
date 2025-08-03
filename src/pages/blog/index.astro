@@ -1,0 +1,42 @@
+---
+import Main from "@/layouts/main.astro";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import blogs from "@/data/blogs.json";
+
+---
+
+<Main content={{ title: "Blog - Amin Modaresi" }}>
+  <div class="p-4">
+    <h1 class="text-4xl font-bold mb-8">Blog Posts</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {
+        blogs.map((blog) => (
+          <Card>
+            <CardHeader>
+              <CardTitle>
+                <a href={`/blog/${blog.id}`} class="hover:text-blue-500 transition-colors">
+                  {blog.title}
+                </a>
+              </CardTitle>
+              <CardDescription>{blog.description}</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div class="flex gap-2 flex-wrap">
+                {blog.tags.map((tag) => (
+                  <Badge variant="secondary">{tag}</Badge>
+                ))}
+              </div>
+            </CardContent>
+            <CardFooter>
+              <div class="flex justify-between w-full text-sm text-gray-500">
+                <span>{blog.author}</span>
+                <time>{new Date(blog.date).toLocaleDateString()}</time>
+              </div>
+            </CardFooter>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</Main>
