@@ -4,19 +4,21 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
-  output: 'static', // Since you're using static site generation
+  // Since you're using static site generation
+  output: 'server',
+
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [react(), icon()],
   experimental: {
-    responsiveImages: true
+    session: true
   },
-  image: {
-    service: {
-      entrypoint: 'astro/assets/services/sharp'
-    }
-  }
+
+  integrations: [react(), icon()],
+
+  adapter: cloudflare()
 });
