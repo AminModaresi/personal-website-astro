@@ -14,11 +14,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
- experimental: {
-    responsiveImages: true,      // optional in v5.4
-    clientPrerender: true,       // if you use `prefetch: true`
-    contentIntellisense: true,   // if using `.mdx/.mdoc` content collections
-    session : true,          // if you use `session` in your components
+  experimental: {
+    
   },
 
   integrations: [react(), icon()],
