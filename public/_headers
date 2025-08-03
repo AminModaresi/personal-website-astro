@@ -1,0 +1,8 @@
+/
+  ! node-version=18.20.8
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  X-XSS-Protection: 1; mode=block
