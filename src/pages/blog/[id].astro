@@ -11,7 +11,14 @@ export async function getStaticPaths() {
   }));
 }
 
+// Get blog from props
 const { blog } = Astro.props;
+console.log(blog);
+
+// // Redirect to blog index if blog not found
+// if (!blog) {
+//   return Astro.redirect('/blog');
+// }
 ---
 
 <Main content={{ title: `${blog.title} - Amin Modaresi` }}>

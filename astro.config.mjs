@@ -7,14 +7,8 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server', // Changed to server output mode
-  adapter: cloudflare({
-    mode: 'directory',
-    runtime: {
-      mode: 'local',
-      type: 'pages'
-    }
-  }),
+  output: 'static', // Changed to server output mode
+  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()],
     build: {
@@ -26,7 +20,6 @@ export default defineConfig({
   integrations: [
     react({
       include: ['**/react/*'],
-      ssr: true
     }), 
     icon()
   ]
