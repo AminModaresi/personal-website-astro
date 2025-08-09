@@ -1,11 +1,6 @@
-[configuration]
+name = "personal-website-astro"
 compatibility_date = "2023-06-28"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "./dist"
 
-[[kv_namespaces]]
-binding = "SESSION"
-id = "YOUR_KV_NAMESPACE_ID"
-preview_id = "YOUR_PREVIEW_KV_NAMESPACE_ID"
-
-[site]
-bucket = "./dist"
+# This will deploy to Cloudflare Pages with SSR support
