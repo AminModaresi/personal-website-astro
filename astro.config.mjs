@@ -3,11 +3,17 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import icon from 'astro-icon';
+import vercelStatic from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  vite: {
+  adapter: vercelStatic({
+    webAnalytics: {
+      enabled: true,
+    },
+    maxDuration: 8,
+  }),  vite: {
     plugins: [tailwindcss()],
     // Remove the rollupOptions that were causing module resolution issues
   },

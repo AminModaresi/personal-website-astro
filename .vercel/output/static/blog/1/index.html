@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="favicon/favicon.svg"><link rel="shortcut icon" href="favicon/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png"><link rel="manifest" href="favicon/site.webmanifest"><!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;8f419be8f6ad47e8a91f5e4c99534d23&quot;}"></script><!-- End Cloudflare Web Analytics --><script>
+      const getThemePreference = () => {
+        if (
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
+        ) {
+          return localStorage.getItem("theme");
+        }
+        return window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+      };
+      const isDark = getThemePreference() === "dark";
+      document.documentElement.classList[isDark ? "add" : "remove"]("dark");
+
+      if (typeof localStorage !== "undefined") {
+        const observer = new MutationObserver(() => {
+          const isDark = document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+        });
+        observer.observe(document.documentElement, {
+          attributes: true,
+          attributeFilter: ["class"],
+        });
+      }
+    </script><title>Building a Smart Chatbot: Integrating n8n with Goftino - Amin Modaresi</title><link rel="stylesheet" href="/_astro/_id_.Bs9z-Iqq.css"></head> <body class="bg-[radial-gradient(#e5e7eb_1px,transparent_0)] dark:bg-[radial-gradient(#272727_1px,transparent_0)]"> <div class="w-full lg:w-[1000px] mx-auto">  <article class="p-4 max-w-3xl mx-auto"> <header class="mb-8"> <h1 class="text-4xl font-bold mb-4">Building a Smart Chatbot: Integrating n8n with Goftino</h1> <div class="flex gap-4 text-gray-500 mb-4"> <span>Amin Modaresi</span> <time>8/2/2025</time> </div> <div class="flex gap-2 flex-wrap"> <span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">n8n</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">goftino</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">chatbot</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">automation</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">tutorial</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">customer-service</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent bg-secondary text-secondary-foreground [a&amp;]:hover:bg-secondary/90">integration</span> </div> </header> <!-- have /n in text --> <div class="prose dark:prose-invert max-w-none whitespace-pre-line"> Creating a smart chatbot can significantly enhance customer engagement and streamline support processes. In this tutorial, we&#39;ll explore how to integrate n8n, an open-source workflow automation tool, with Goftino, a powerful chatbot platform. This combination allows you to automate responses, manage customer interactions, and improve overall service efficiency.
+
+## What You Will Learn
+
+1. **Setting Up n8n**: How to install and configure n8n for your environment.
+2. **Connecting Goftino**: Steps to integrate Goftino with n8n.
+3. **Creating Workflows**: Designing workflows that automate common customer queries.
+4. **Testing and Deployment**: Ensuring your chatbot works seamlessly before going live.
+
+## Step 1: Setting Up n8n
+
+To get started, you need to have n8n installed. You can run it locally or deploy it on a server. Follow the [official installation guide](https://docs.n8n.io/getting-started/installation/) for detailed instructions.
+
+## Step 2: Connecting Goftino
+
+Once n8n is up and running, you need to connect it with Goftino. This typically involves creating an API key in Goftino and configuring the n8n node to use this key for authentication.
+
+## Step 3: Creating Workflows
+
+In n8n, you can create workflows that respond to specific triggers from Goftino. For example, when a user sends a message containing &#39;help&#39;, you can set up a workflow that automatically responds with relevant information or directs them to a human agent if necessary.
+
+## Step 4: Testing and Deployment
+
+Before deploying your chatbot, thoroughly test all workflows to ensure they handle various scenarios correctly. Once satisfied, you can deploy your chatbot and monitor its performance through n8n&#39;s dashboard.
+
+## Conclusion
+
+Integrating n8n with Goftino allows you to build a powerful chatbot that enhances customer service capabilities. By automating responses and managing interactions efficiently, you can focus on more complex tasks while ensuring your customers receive timely assistance. </div> <div class="mt-8"> <a href="/blog" class="text-blue-500 hover:underline">← Back to Blog</a> </div> </article>  </div> </body></html>
