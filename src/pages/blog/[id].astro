@@ -2,8 +2,8 @@
 import Main from "@/layouts/main.astro";
 import { Badge } from "@/components/ui/badge";
 import blogs from "@/data/blogs.json";
+import MarkdownRenderer from "@/components/common/MarkdownRender";
 
-// Required for dynamic routes
 export async function getStaticPaths() {
   return blogs.map((blog) => ({
     params: { id: blog.id },
@@ -11,14 +11,7 @@ export async function getStaticPaths() {
   }));
 }
 
-// Get blog from props
 const { blog } = Astro.props;
-console.log(blog);
-
-// // Redirect to blog index if blog not found
-// if (!blog) {
-//   return Astro.redirect('/blog');
-// }
 ---
 
 <Main content={{ title: `${blog.title} - Amin Modaresi` }}>
@@ -33,10 +26,10 @@ console.log(blog);
         {blog.tags.map((tag) => <Badge variant="secondary">{tag}</Badge>)}
       </div>
     </header>
-    <!-- have /n in text -->
-    <div class="prose dark:prose-invert max-w-none whitespace-pre-line">
-      {blog.content}
-    </div>
+
+    <!-- Render Markdown with React -->
+    <MarkdownRenderer client:load content={blog.content} />
+
     <div class="mt-8">
       <a href="/blog" class="text-blue-500 hover:underline">← Back to Blog</a>
     </div>
