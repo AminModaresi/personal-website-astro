@@ -13,7 +13,8 @@ export default defineConfig({
       enabled: true,
     },
     maxDuration: 8,
-  }),  vite: {
+  }),
+  vite: {
     plugins: [tailwindcss()],
     // Remove the rollupOptions that were causing module resolution issues
   },
