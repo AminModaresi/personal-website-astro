@@ -80,7 +80,11 @@
       "cdn" : true
     },
     { "name": "Webflow", "icon": "webflow-icon.png" , "cdn" : false},
-    { "name": "n8n", "icon": "n8n.svg" , "cdn" : false}
+    { "name": "n8n", "icon": "n8n.svg" , "cdn" : false},
+    { "name": "Docker", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" , "cdn" : true},
+    { "name": "Linux", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg  " , "cdn" : true},
+    { "name": "TMux", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tmux/tmux-original.svg" , "cdn" : true},
+    { "name": "Supabase", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" , "cdn" : true}
   ],
   "Backend": [{ "name": "RESTful API's", "icon": "restfullapi.png", "cdn" : false }]
 }

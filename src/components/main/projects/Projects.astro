@@ -14,25 +14,52 @@ import { Icon } from "astro-icon/components";
 ---
 
 <BorderContainer>
-  <div class="grid md:grid-cols-2 gap-4">
+  <div class="grid md:grid-cols-2 gap-6">
     {
       data.map((item) => (
-        <Card className="border-dashed">
-          <CardHeader className="border-b border-dashed border-neutral-200 dark:border-neutral-800">
-            <div class="flex justify-between items-center">
-              <CardTitle>{item.name}</CardTitle>
-              {item?.link &&<Button variant="outline" size="icon" asChild={item?.link !== ""}>
-                <a href={item?.link} target="_blank"><Icon name="lets-icons:out" /></a>
-              </Button>}
+        <Card className="group relative overflow-hidden border-l-4 border-l-green-500/20 hover:border-l-green-500/60 transition-all duration-300">
+          {/* Background decoration */}
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/5 to-emerald-500/5 dark:from-green-400/10 dark:to-emerald-400/10 rounded-full transform translate-x-16 -translate-y-16 transition-transform duration-500 group-hover:scale-150 group-hover:translate-x-8 group-hover:-translate-y-8"></div>
+          
+          <CardHeader className="relative z-10 border-b border-dashed border-neutral-200 dark:border-neutral-800">
+            <div class="flex justify-between items-start gap-4">
+              <div class="flex-1">
+                <CardTitle className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
+                  {item.name}
+                </CardTitle>
+                <CardDescription className="mt-2 text-sm leading-relaxed">
+                  {item.short_description}
+                </CardDescription>
+              </div>
+              {item?.link && (
+                <Button 
+                  variant="outline" 
+                  size="icon" 
+                  className="flex-shrink-0 hover:bg-green-500/10 hover:border-green-500/30 transition-all duration-200"
+                  asChild={item?.link !== ""}
+                >
+                  <a href={item?.link} target="_blank" class="hover:scale-110 transition-transform duration-200">
+                    <Icon name="lets-icons:out" />
+                  </a>
+                </Button>
+              )}
             </div>
-            <CardDescription>{item.short_description}</CardDescription>
           </CardHeader>
-          <CardContent>
-            <ul class="list-disc pl-4">
-              {item.details.map((detil) => (
-                <li class="mb-2">{detil}</li>
-              ))}
-            </ul>
+          
+          <CardContent className="relative z-10">
+            <div class="space-y-3">
+              <h4 class="text-sm font-semibold text-muted-foreground uppercase tracking-wide">
+                Project Details
+              </h4>
+              <ul class="space-y-3">
+                {item.details.map((detail, index) => (
+                  <li class="flex items-start gap-3 text-sm leading-relaxed">
+                    <div class="w-1.5 h-1.5 rounded-full bg-green-500/60 mt-2 flex-shrink-0"></div>
+                    <span class="text-foreground/90">{detail}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </CardContent>
         </Card>
       ))

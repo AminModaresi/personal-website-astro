@@ -7,27 +7,66 @@ import BorderContainer from "../../common/BorderContainer";
 <section>
   <BorderContainer>
     <TitleHeader title="My Skills" />
-    <div class="flex flex-wrap gap-4 mt-8">
+    <div class="flex flex-wrap gap-8 mt-8">
       {
         Object.entries(data).map(([category, items]) => (
           <div class="w-full">
             <TitleHeader title={category} size={"small"} />
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-4">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-8">
               {items.map((item) => (
                 <div
-                  class="flex justify-center items-center flex-col gap-3 p-4 rounded-xl 
-         bg-white bg-gradient-to-tl from-gray-100 to-gray-300 
-         dark:bg-[rgb(29,29,32)] dark:from-[#232526] dark:to-[#414345] 
-         transition-all duration-700 
-         hover:bg-gradient-to-br
-         dark:hover:from-[#434546] dark:hover:to-[#252729]"
+                  class="group relative flex justify-center items-center flex-col gap-3 p-6 rounded-2xl 
+                         bg-gradient-to-br from-white via-gray-50 to-gray-100
+                         dark:from-gray-800 dark:via-gray-900 dark:to-gray-950
+                         border border-gray-200/50 dark:border-gray-700/50
+                         shadow-lg shadow-gray-200/50 dark:shadow-gray-900/50
+                         transition-all duration-500 ease-out
+                         hover:scale-105 hover:shadow-2xl hover:shadow-gray-300/60 dark:hover:shadow-gray-800/60
+                         hover:border-gray-300/70 dark:hover:border-gray-600/70
+                         hover:bg-gradient-to-br hover:from-white hover:to-gray-50
+                         dark:hover:from-gray-700 dark:hover:to-gray-800
+                         cursor-pointer
+                         before:absolute before:inset-0 before:rounded-2xl 
+                         before:bg-gradient-to-br before:from-transparent before:via-transparent before:to-gray-100/20
+                         dark:before:to-gray-400/10
+                         before:opacity-0 before:transition-opacity before:duration-500
+                         hover:before:opacity-100
+                         overflow-hidden"
                 >
-                  <img
-                    src={item.cdn ? item.icon : `/skills/${item.icon}`}
-                    alt={item.name}
-                    width="50"
-                  />
-                  <p class="font-medium">{item.name}</p>
+                  {/* Background decoration */}
+                  <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 
+                              dark:from-blue-400/20 dark:to-purple-400/20 rounded-full 
+                              transform translate-x-8 -translate-y-8 
+                              transition-transform duration-700 group-hover:scale-150 group-hover:translate-x-4 group-hover:-translate-y-4"></div>
+                  
+                  {/* Icon container with enhanced styling */}
+                  <div class="relative z-10 flex items-center justify-center w-16 h-16 rounded-xl
+                              bg-gradient-to-br from-gray-100 to-gray-200
+                              dark:from-gray-700 dark:to-gray-800
+                              shadow-inner shadow-gray-300/50 dark:shadow-gray-900/50
+                              transition-all duration-500 group-hover:shadow-lg group-hover:shadow-gray-400/30 dark:group-hover:shadow-gray-700/30
+                              group-hover:from-gray-50 group-hover:to-gray-100
+                              dark:group-hover:from-gray-600 dark:group-hover:to-gray-700">
+                    <img
+                      src={item.cdn ? item.icon : `/skills/${item.icon}`}
+                      alt={item.name}
+                      width="32"
+                      height="32"
+                      class="transition-transform duration-500 group-hover:scale-110 filter drop-shadow-sm"
+                    />
+                  </div>
+                  
+                  {/* Skill name with enhanced typography */}
+                  <p class="relative z-10 font-semibold text-sm text-gray-700 dark:text-gray-300 
+                             transition-colors duration-300 group-hover:text-gray-900 dark:group-hover:text-white
+                             text-center leading-tight">
+                    {item.name}
+                  </p>
+                  
+                  {/* Subtle border accent */}
+                  <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 
+                              bg-gradient-to-r from-blue-500 to-purple-500 rounded-full
+                              transition-all duration-500 group-hover:w-8"></div>
                 </div>
               ))}
             </div>

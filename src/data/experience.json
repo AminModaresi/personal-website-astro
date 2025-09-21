@@ -1,6 +1,32 @@
 {
     "experience": [
       {
+        "title": "Software Engineer",
+        "company": "Solenery",
+        "location": "Toronto, Canada",
+        "duration": "2025 – present",
+        "responsibilities": [
+          "Developed Partner Dashboard for the company using Next.js and Tailwind CSS, shadcn/ui, improving UI consistency across platforms."
+        ]
+      },
+      {
+        "title": "CEO & Co-founder",
+        "company": "Bin Menu",
+        "location": "Mashhad, Iran",
+        "duration": "2025 – present",
+        "responsibilities": [
+          "Developed and maintained the company's website using Next.js and Tailwind CSS, shadcn/ui , supabase"
+        ]
+      },
+      {
+        "title": "CEO & Co-founder",
+        "company": "Bin Link",
+        "location": "Mashhad, Iran",
+        "duration": "2025 – present",
+        "responsibilities": [
+        ]
+      },
+      {
         "title": "Front-end Developer",
         "company": "MagicalAPI",
         "location": "Muscat, Oman",
