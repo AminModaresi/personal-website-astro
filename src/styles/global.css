@@ -2,8 +2,6 @@
 
 @plugin 'tailwindcss-animate';
 
-@variant dark (&:is(.dark *));
-
 
 
 :root {
