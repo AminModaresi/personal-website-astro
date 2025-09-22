@@ -30,6 +30,7 @@ const { content } = Astro.props;
       data-cf-beacon='{"token": "8f419be8f6ad47e8a91f5e4c99534d23"}'
     ></script><!-- End Cloudflare Web Analytics -->
 
+
     <script is:inline>
       const getThemePreference = () => {
         if (
@@ -61,7 +62,7 @@ const { content } = Astro.props;
   <body
     class="bg-[radial-gradient(#e5e7eb_1px,transparent_0)] dark:bg-[radial-gradient(#272727_1px,transparent_0)]"
   >
-    <!-- Theme Toggle Button - Fixed Position -->
+  <!-- Theme Toggle Button - Fixed Position -->
     <div class="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
       <ThemeToggle client:load />
     </div>
